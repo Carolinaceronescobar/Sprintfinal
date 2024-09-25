@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:ignore="ExtraText">
+
+    <!-- Contenedor principal con los botones e imagen -->
+    <LinearLayout
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_go_main_activity"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Imagen del logo de la empresa -->
+        <ImageView
+            android:id="@+id/image_company"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="Logo Hoy Empresas"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/hoy_empresas_logo" />
+
+        <!-- Botones de enlaces -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instagram" />
+
+            <Button
+                android:id="@+id/button_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook" />
+
+            <Button
+                android:id="@+id/button_linkedin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LinkedIn" />
+        </LinearLayout>
+
+        <!-- Texto adicional -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escanea el código QR para más información"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+
+        <!-- Imagen de QR -->
+        <ImageView
+            android:id="@+id/image_qr"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Código QR"
+            android:src="@drawable/cuerre" />
+    </LinearLayout>
+
+    <!-- Botón para ir al inicio -->
+    <Button
+        android:id="@+id/button_go_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Ir al Inicio"
+        android:layout_marginBottom="16dp" />
+</RelativeLayout>
